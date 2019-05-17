@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="us-EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a National Park</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Which National Park Will You Vacation At?</h1>
+
+            <form>
+                <label>
+                    <span>Select a state (use state abbreviations and separate with comma): </span>
+                    <input type="text" id="js-state-selected" placeholder="Ex. MI, CA" required>
+                </label>
+                <label>
+                    <span>Number of results to show (max 25): </span>
+                    <input type="number" min="1" max="25" id="js-search-number" value="10" required>
+                </label>
+
+                <input type="submit" value="Search">
+            </form>
+
+            <p id="js-error-message" class="error-message"></p>
+            <section class="results hidden" id="js-results">
+                <h2>Search Results</h2>
+                <ul class="search-results"></ul>
+            </section>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
